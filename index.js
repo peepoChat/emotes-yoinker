@@ -1,18 +1,10 @@
 const fs = require("fs");
 let emotes = new Map();
 
-fs.readFile("bttv_pwgood.json", function (err, data) {
+fs.readFile("forsen_bttv.json", function (err, data) {
   let jsonData = data;
   let jsonParsed = JSON.parse(jsonData);
-  for (let i = 0; i <= 76; i++) {
-    emotes.set(
-      "`" + jsonParsed.channelEmotes[i].code + "`",
-      "`" +
-        `https://cdn.betterttv.net/emote/${jsonParsed.channelEmotes[i].id}/1x` +
-        "`"
-    );
-  }
-  for (let i = 0; i <= 84; i++) {
+  for (let i = 0; i <= 93; i++) {
     emotes.set(
       "`" + jsonParsed.sharedEmotes[i].code + "`",
       "`" +
@@ -21,7 +13,7 @@ fs.readFile("bttv_pwgood.json", function (err, data) {
     );
   }
 });
-fs.readFile("ffz_pwgood.json", function (err, data) {
+fs.readFile("ffz_forsen.json", function (err, data) {
   let jsonData = data;
   let jsonParsed = JSON.parse(jsonData);
   for (let i = 0; i <= 49; i++) {
